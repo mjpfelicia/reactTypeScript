@@ -1,0 +1,28 @@
+.search {
+    background-color: var(--color_azul_bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search_p {
+    color: black;
+}
+
+.search_container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search_inpult,
+.search_button {
+    padding: .5rem;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,8 +1,38 @@
-import React from 'react'
+import { UserProps } from "../Types/user"
+import Search from "../componentes/Search/Search"
+import { useState } from 'react'
 
- const Home = () => {
+
+const Home = () => {
+
+  const [user, setUser] = useState<UserProps | null>(null);
+
+  const loadUser = async (userName: string) => {
+    const res = await fetch(`https://api.github.com/users/${userName}`);
+
+    const data = await res.json();
+    const { avatar_url, login, location, followers, following } = data;
+
+    const userData: UserProps = {
+      avatar_url,
+      login,
+      location,
+      followers,
+      following
+    };
+
+    setUser(userData);
+
+  }
+
   return (
-    <div>Home</div>
+    <div>
+      <Search loadUser={loadUser} />
+      {user && <p>{user.login}</p>}
+    </div>
   )
 }
+
+Home.propTypes = {}
+
 export default Home
