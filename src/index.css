@@ -3,13 +3,14 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    color: black;
+    color: white;
 }
 
 :root {
     --color_azul_bg: #09c;
     --color_border: #007399;
     --color-icon: #0000b3;
+    --color-border-img:#513dca;
     --color_branca: #fff;
     --color-bg_menu: #F4F4F4;
     --color-hover-clicado: #f2f2f2;
@@ -17,6 +18,8 @@
     --color-line: rgb(35, 27, 27, 6%);
     --color-error: red;
     --color-titleCadastro: #1E1E1E;
+    --color_svg:#4ed8c7;
+    --color-span:#9da5d1;
 
 }
 
